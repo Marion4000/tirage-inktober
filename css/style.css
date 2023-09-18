@@ -1,0 +1,195 @@
+:root {
+  --sombre: #000000;
+  --medium: #414141;
+  --claire: #ffffff;
+  --primaire-claire: #46b472;
+  --primaire-foncee: #1c4a2e;
+  /*  */
+  --taille-xs: 1rem;
+  --taille-s: 2rem;
+  --taille-m: 3rem;
+  --taille-l: 4rem;
+  --taille-xl: 5rem;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+  /*  */
+  font-family: "IBM Plex Serif", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--sombre);
+}
+/* ------------------------------------------------------ Accueil------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------ MAIN-------------------------------------------- */
+main.accueil {
+  /*  */
+  max-width: 36rem;
+  margin: auto;
+}
+
+/* 
+
+
+
+TITRES
+
+
+
+*/
+h1 {
+  font-weight: 700;
+  font-size: var(--taille-xl);
+  text-align: center;
+  line-height: 0.9;
+  /*  */
+  margin: var(--taille-m);
+  /*  */
+  grid-area: 1;
+}
+h2 {
+  font-weight: 700;
+  font-size: var(--taille-m);
+  text-align: center;
+  /*  */
+  margin: auto;
+  /*  */
+  grid-area: 2;
+}
+/* 
+
+
+
+BOUTONS
+
+
+
+*/
+button {
+  display: block;
+  /* */
+  font-family: "IBM Plex Serif", sans-serif;
+}
+button:hover {
+  cursor: pointer;
+}
+/* 
+
+
+Bouton de sélection
+
+
+*/
+#btn-selection {
+  margin-top: var(--taille-xl);
+  margin-bottom: var(--taille-xl);
+  margin-left: auto;
+  margin-right: auto;
+  /*  */
+  background-color: var(--sombre);
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: var(--taille-xs);
+  padding: var(--taille-s);
+  /*  */
+  font-size: var(--taille-s);
+  font-weight: 700;
+  color: var(--claire);
+  /*  */
+  grid-area: 3;
+}
+#btn-selection:hover {
+  background-color: var(--medium);
+}
+#btn-selection:active {
+  background-color: var(--claire);
+  border-color: rgba(0, 0, 0, 1);
+  color: var(--sombre);
+}
+.invisible {
+  display: none;
+}
+/* 
+
+
+Bouton vers la galerie
+
+
+*/
+.btn-galerie {
+  border: none;
+  background-color: transparent;
+  /*  */
+  font-style: italic;
+  font-weight: 700;
+  font-size: var(--taille-xs);
+}
+/* 
+
+
+Image style 
+
+
+*/
+div#image-style {
+  height: 325px;
+  width: 325px;
+  /*  */
+  /*  */
+  margin: auto;
+}
+.image-style {
+  display: inline-block;
+  margin: auto;
+  width: 325px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  /*  */
+  border: 5px solid var(--sombre);
+}
+/* ------------------------------------------------------ FOOTER -------------------------------------------- */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*  */
+  padding: var(--taille-m);
+  /*  */
+  max-width: 36rem;
+  margin: auto;
+}
+p.copyright {
+  color: var(--medium);
+}
+
+/* ------------------------------------------------------ Galerie------------------------------------------------------------------------------------------------- */
+div.galerie {
+  display: grid;
+  grid-template-areas:
+    "01 02 03 04 05 06 07"
+    "08 09 10 11 12 13 14"
+    "15 16 17 18 19 20 21"
+    "22 23 24 25 26 27 28"
+    "29 30 31 . . . .";
+  /*  */
+  max-width: 65vw;
+  margin: auto;
+  /*  */
+  gap: var(--taille-xs);
+}
+div.galerie > img {
+  display: inline-block;
+  max-width: 170px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+/* Styles sélectionnés */
+.galerie-06 {
+  filter: grayscale(100%);
+}
